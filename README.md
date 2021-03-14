@@ -18,4 +18,4 @@ Un usuario no debería poder comprar un producto del cual no tiene suficientes p
 Cuando el usuario compra, la cantidad de puntos debe ser deducida automaticamente de los puntos disponibles.
 Debe haber una pantalla donde ver el historial de productos canjeados
 No debo poder comprar un producto mientras cargo puntos o estoy comprando otro producto
-Debe haber un máximo de 16 productos en pantalla pero debo poder cambiar de página para ver el resto
+Debe haber un máximo de 16 productos en pantalla pero debo poder cambiar de página para ver el restos
