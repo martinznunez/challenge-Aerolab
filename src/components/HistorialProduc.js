@@ -1,28 +1,31 @@
-import React, { useContext, useEffect } from "react";
-import { UserContext } from "../context/UserContext";
+import React, { useState, useEffect } from "react";
+
 import { Spinner } from "./Spinner";
 import { Link } from "react-router-dom";
+import { getHistorialCanje } from "../servicios/getProductosCanje";
 
 const HistorialProduc = () => {
-  const {
-    historial,
-    loading,
-    setLoading,
-    reclamaProductoHistorial,
-  } = useContext(UserContext);
+  const [historial, setHistorial] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    reclamaProductoHistorial();
-  }, [reclamaProductoHistorial]);
+    const getHistorial = async () => {
+      try {
+        const respuesta = await getHistorialCanje();
+        setHistorial(respuesta.data);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-  if (historial.length) {
-    setLoading(false);
-  }
+    getHistorial();
+  }, []);
 
-  if (loading === true) {
+  if (loading) {
     return (
       <div className="spinner">
-        <Spinner />;
+        <Spinner />
       </div>
     );
   }

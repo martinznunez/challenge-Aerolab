@@ -1,10 +1,12 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../context/UserContext";
-
+import MensajeErrorApi from "./MensajeErrorApi";
 import Modal from "./Modal";
 
 const User = () => {
-  const { usuario, reclamarPuntos, setLoading } = useContext(UserContext);
+  const { usuario, reclamarPuntos, setLoading, errorApi } = useContext(
+    UserContext
+  );
 
   const [showModal, setShowModal] = useState(false);
 
@@ -13,6 +15,10 @@ const User = () => {
     setShowModal(false);
     setLoading(true);
   };
+
+  if (errorApi) {
+    return <MensajeErrorApi />;
+  }
 
   return (
     <>

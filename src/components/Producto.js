@@ -11,7 +11,7 @@ const Producto = () => {
     setUsuario,
     loading,
     errorApi,
-    setApiError,
+
     reclamaProducto,
   } = useContext(UserContext);
 
@@ -23,7 +23,7 @@ const Producto = () => {
     setUsuario({ ...usuario, points: restarPoinst });
   };
 
-  if (loading === true) {
+  if (loading) {
     return (
       <div className="spinner">
         <Spinner />;
@@ -31,7 +31,7 @@ const Producto = () => {
     );
   }
 
-  if (errorApi === true) {
+  if (errorApi) {
     return <MensajeErrorApi />;
   }
 

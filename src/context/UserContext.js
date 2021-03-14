@@ -6,7 +6,6 @@ import { postPoints } from "../servicios/points";
 import { postRedeem } from "../servicios/redeem";
 import { fetchUser } from "../servicios/getUser";
 
-import { getHistorialCanje } from "../servicios/getProductosCanje";
 export const UserContext = createContext();
 
 const productosPorPagina = 16;
@@ -30,8 +29,12 @@ const UserProvider = (props) => {
       const respuesta = await fetchUser();
       setUsuario(respuesta.data);
     } catch (error) {
-      //   setErrorApi(true);
-      console.log(error);
+      if (error.response) {
+        setErrorApi(true);
+      }
+      //   if (error.response?.data?.error) {
+      //     return setErrorApi(true);
+      //   }
     }
   }, []);
 
@@ -49,8 +52,9 @@ const UserProvider = (props) => {
         const usuarioOriginal = { ...usuario, points: data };
         setUsuario(usuarioOriginal);
       } catch (error) {
-        // setErrorApi(true);
-        console.log(error);
+        if (error.response) {
+          setErrorApi(true);
+        }
       }
     },
     [usuario]
@@ -66,19 +70,9 @@ const UserProvider = (props) => {
         setLoading(false);
       }
     } catch (error) {
-      setErrorApi(true);
-    }
-  }, []);
-
-  const reclamaProductoHistorial = useCallback(async () => {
-    setLoading(true);
-    try {
-      const respuesta = await getHistorialCanje();
-
-      setHistorial(respuesta.data);
-    } catch (error) {
-      //   setErrorApi(true);
-      console.log(error);
+      if (error.response) {
+        setErrorApi(true);
+      }
     }
   }, []);
 
@@ -153,7 +147,6 @@ const UserProvider = (props) => {
         setProductos,
         obtenerProductos,
         reclamaProducto,
-        reclamaProductoHistorial,
         ordernarMayorPrecio,
         ordernarMenorPrecio,
         reclamarPuntos,

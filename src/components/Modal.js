@@ -13,11 +13,7 @@ const Modal = ({ children, show, onClose, handleSetPuntos }) => {
         </div>
         <div className="container-btn">
           {tiposDePuntos.map((item) => (
-            <button
-              key={item}
-              value={item}
-              onClick={(e) => handleSetPuntos(e.target.value)}
-            >
+            <button key={item} onClick={(e) => handleSetPuntos(item)}>
               {item} <img src="/assets/coin.svg" alt="" />
             </button>
           ))}
