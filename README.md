@@ -19,3 +19,7 @@ Cuando el usuario compra, la cantidad de puntos debe ser deducida automaticament
 Debe haber una pantalla donde ver el historial de productos canjeados
 No debo poder comprar un producto mientras cargo puntos o estoy comprando otro producto
 Debe haber un máximo de 16 productos en pantalla pero debo poder cambiar de página para ver el restos
+
+![Captura de Pantalla 2021-03-14 a la(s) 09 21 19](https://user-images.githubusercontent.com/63752985/111069242-eb2f8980-84aa-11eb-9ae6-3ed18d1e6f8b.png)
+
+<img width="925" alt="Captura de Pantalla 2021-03-14 a la(s) 09 24 43" src="https://user-images.githubusercontent.com/63752985/111069321-406b9b00-84ab-11eb-87b3-19dbb741e93e.png">
