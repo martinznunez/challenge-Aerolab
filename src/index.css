@@ -474,7 +474,7 @@ code {
 }
 @media screen and (min-width: 1270px) {
   .card {
-    width: 300px;
+    width: 280px;
     height: 550px;
     margin-top: 10px;
   }
