@@ -126,7 +126,7 @@ code {
   flex-direction: column;
   align-items: center;
   margin: auto;
-  width: 480px;
+  width: 400px;
   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   margin-top: 10px;
@@ -146,7 +146,7 @@ code {
   flex-direction: column;
   align-items: center;
   margin: auto;
-  width: 450px;
+  width: 400px;
   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   margin-top: 10px;
@@ -154,7 +154,7 @@ code {
 @media screen and (min-width: 900px) {
   .container-producto {
     display: flex;
-    width: 100%;
+    width: 90%;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -277,8 +277,6 @@ code {
   bottom: 0;
 }
 
-
-
 .container-modal span {
   font-size: 1.4rem;
   color: #323232;
@@ -286,14 +284,12 @@ code {
   cursor: pointer;
 }
 
-
-
 .container-btn {
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 200px;
-  text-align: center;  
+  text-align: center;
   margin: auto;
 }
 
@@ -310,24 +306,22 @@ code {
   cursor: pointer;
 }
 .container-btn :hover {
-   background-color: #ffd700;
-  }
-
-@media screen and (min-width: 900px){
-    .container-modal {
-        width: 60%;
-    }
-    .container-modal span {
-        font-size: 1.7rem;
-        
-      }
-      
+  background-color: #ffd700;
 }
 
-@media screen and (min-width: 1200px){
-    .container-modal {
-        width: 40%;
-    }
+@media screen and (min-width: 900px) {
+  .container-modal {
+    width: 60%;
+  }
+  .container-modal span {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-modal {
+    width: 40%;
+  }
 }
 
 .btn {
@@ -371,9 +365,9 @@ code {
 .first:hover {
   box-shadow: 0 0 40px 40px #e74c3c inset;
 }
-.container-icon-enlace-historial{
-    margin: 15px;
-    position: fixed;
+.container-icon-enlace-historial {
+  margin: 15px;
+  position: fixed;
 }
 
 .container-historial {
@@ -410,8 +404,8 @@ code {
   color: white;
 }
 
-.container-paginador{
-    display: flex;
+.container-paginador {
+  display: flex;
 }
 .pagina-active {
   color: red;
@@ -427,7 +421,6 @@ code {
   background-color: #0099cc;
   padding: 6px;
   color: #fff;
- 
 }
 
 .spinner {
@@ -441,16 +434,13 @@ code {
     height: 300px;
   }
 
-  .paginas  {
+  .paginas {
     font-size: 2rem;
-    
   }
   .pagina-active {
     font-size: 1.8rem;
-    
-   
   }
- 
+
   .container-seccion-header img {
     height: 330px;
   }
@@ -502,19 +492,13 @@ code {
   }
 }
 
-
 /*  */
 
-
-.container-mensaje-error-api{
-    position: absolute;
-    width: 70%;
-    z-index: 10;
-    height: 40px;
-    
+.container-mensaje-error-api {
+  position: absolute;
+  width: 70%;
+  z-index: 10;
+  height: 40px;
 }
 
-
-
 /*  */
-
